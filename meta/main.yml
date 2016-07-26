@@ -1,11 +1,17 @@
 ---
 galaxy_info:
   author: Amrit Singh
-  description: Ansible role to load config for eye and to restart all the jobs
+  description: Ansible Role to install CloudWatchMonitoringScripts and Monitor Memory and Disk Metrics for Amazon EC2 Linux Instances
   license: Apache
   min_ansible_version: 1.4
   platforms:
   - name: Ubuntu
+    versions:
+    - all
+  - name: RedHat
+    versions:
+    - all
+  - name: Suse
     versions:
     - all
   categories:
