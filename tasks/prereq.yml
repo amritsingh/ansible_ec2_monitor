@@ -4,16 +4,19 @@
   apt: name={{ item }} state=present
   with_items: ['unzip', 'libwww-perl',  'libdatetime-perl']
   when: ansible_os_family == "Debian"
+  sudo: True
 
 - name: "Install yum packages"
   yum: name={{ item }} state=present
   with_items: ['perl-Switch', 'perl-DateTime',  'perl-Sys-Syslog', 'perl-LWP-Protocol-https']
   when: ansible_os_family == "RedHat"
+  sudo: True
 
 - name: "Install zypper packages"
   zypper: name={{ item }} state=present
   with_items: ['perl-Switch', 'perl-DateTime',  'perl(LWP::Protocol::https)']
   when: ansible_os_family == "Suse"
+  sudo: True
 
 - name: Download Amazon CloudWatch Monitoring Scripts
   get_url: url=http://aws-cloudwatch.s3.amazonaws.com/downloads/CloudWatchMonitoringScripts-1.2.1.zip dest={{ cloud_watch_monitoring_path }}/CloudWatchMonitoringScripts-1.2.1.zip
