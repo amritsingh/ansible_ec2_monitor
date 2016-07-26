@@ -1,0 +1,11 @@
+---
+
+- name: "Remove existing crons"
+  cron: name="{{item.name}}" state=absent
+  with_items: cron_specs
+  ignore_errors: True
+
+- name: "Setup crons"
+  cron: name="{{item.name}}" minute="{{item.minute}}" hour="{{item.hour}}" job="{{item.job}}"
+  with_items: cron_specs
+

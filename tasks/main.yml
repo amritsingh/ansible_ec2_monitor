@@ -1,0 +1,10 @@
+---
+- stat: path={{cloud_watch_monitoring_path}}/aws-scripts-mon
+  register: scripts_dir
+
+- name: Setup Amazon CloudWatch Monitoring Scr
+  include: prereq.yml
+  when: scripts_dir.stat.exists == False
+
+- name: Setup Cron
+  include: cron_setup.yml
