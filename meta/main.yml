@@ -3,7 +3,7 @@ galaxy_info:
   author: Amrit Singh
   description: Ansible Role to install CloudWatchMonitoringScripts and Monitor Memory and Disk Metrics for Amazon EC2 Linux Instances
   license: Apache
-  min_ansible_version: 1.4
+  min_ansible_version: 2.2
   platforms:
   - name: Ubuntu
     versions:
