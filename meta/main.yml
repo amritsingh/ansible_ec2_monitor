@@ -16,4 +16,7 @@ galaxy_info:
     - all
   categories:
   - web
+  - ec2
+  - monitoring
+  - cloudwatch
 dependencies: []
