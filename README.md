@@ -19,17 +19,7 @@ This package has no dependencies on modules not included with Ansible by default
 Install
 -------
 
-Add this pacakge to `requirements.yml`
-
-    $ cat >> requirements.yml <<EOF
-    - src: https://github.com/crazygit/ansible_ec2_monitor.git
-      version: master
-      name: crazygit.ec2_monitor
-    EOF
-
-Install by  `ansible-galaxy`
-
-    $ ansible-galaxy install -r requirements.yml
+    $ ansible-galaxy install amritsingh.ec2_monitor
 
 Usage
 -----
@@ -43,7 +33,8 @@ Example Usage in `site.yml`
       become: yes
       become_method: sudo
       roles:
-          - role: "crazygit.ec2_monitor"
+          - role: "amritsingh.ec2_monitor"
+
             cloud_watch_monitoring_path: "/opt"
             cron_specs:
                 - name: "Send Memory And Disk Usage Statistics"
