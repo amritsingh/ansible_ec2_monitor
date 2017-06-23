@@ -34,6 +34,7 @@ Example Usage in `site.yml`
       become_method: sudo
       roles:
           - role: "amritsingh.ec2_monitor"
+
             cloud_watch_monitoring_path: "/opt"
             cron_specs:
                 - name: "Send Memory And Disk Usage Statistics"
