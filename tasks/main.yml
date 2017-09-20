@@ -8,4 +8,3 @@
 
 - name: Setup Cron
   include: cron_setup.yml
-  sudo: False
