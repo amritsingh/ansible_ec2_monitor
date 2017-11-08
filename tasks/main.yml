@@ -3,8 +3,8 @@
   register: scripts_dir
 
 - name: Setup Amazon CloudWatch Monitoring Scr
-  include: prereq.yml
+  import_tasks: prereq.yml
   when: scripts_dir.stat.exists == False
 
 - name: Setup Cron
-  include: cron_setup.yml
+  import_tasks: cron_setup.yml
